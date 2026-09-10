@@ -68,6 +68,20 @@ html {
   scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--color-primary-dark);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--color-accent-dark);
+  border: 2px solid var(--color-primary-dark);
+  border-radius: var(--radius-full);
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-primary);
@@ -390,8 +404,8 @@ ul {
 
 .hero {
   position: relative;
-  padding-top: 160px;
-  padding-bottom: 100px;
+  padding-top: 116px;
+  padding-bottom: 64px;
   overflow: hidden;
 }
 
@@ -628,7 +642,7 @@ ul {
 
 @media (max-width: 560px) {
   .hero {
-    padding-top: 140px;
+    padding-top: 108px;
   }
 
   .hero__image-wrap {
@@ -663,7 +677,7 @@ ul {
 
 .about {
   position: relative;
-  padding-block: 72px;
+  padding-block: 56px;
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
