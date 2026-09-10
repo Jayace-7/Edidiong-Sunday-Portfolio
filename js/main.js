@@ -81,3 +81,37 @@ const animateHero = () => {
 };
 
 animateHero();
+
+const animateAboutCards = () => {
+  const aboutSection = document.querySelector('.about');
+  const serviceCards = document.querySelectorAll('.about__service-card');
+
+  if (!window.gsap || !aboutSection || !serviceCards.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  const revealCards = () => {
+    gsap.from(serviceCards, {
+      duration: 0.9,
+      y: 32,
+      opacity: 0,
+      scale: 0.96,
+      stagger: 0.12,
+      ease: 'power3.out',
+      clearProps: 'transform,opacity'
+    });
+  };
+
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    if (!entries[0].isIntersecting) {
+      return;
+    }
+
+    revealCards();
+    currentObserver.disconnect();
+  }, { threshold: 0.2 });
+
+  observer.observe(aboutSection);
+};
+
+animateAboutCards();
