@@ -52,3 +52,32 @@ navLinks.forEach((link) => {
     navbar.classList.remove('navbar--open');
   });
 });
+
+const animateHero = () => {
+  const heroContent = document.querySelector('.hero__content');
+  const heroVisual = document.querySelector('.hero__visual');
+
+  if (!window.gsap || !heroContent || !heroVisual || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  const heroItems = heroContent.querySelectorAll('.hero__eyebrow, .hero__headline, .hero__text, .hero__cta, .hero__stats');
+
+  gsap.from(heroItems, {
+    duration: 1.5,
+    y: 24,
+    opacity: 0,
+    stagger: 0.22,
+    ease: 'power2.out'
+  });
+
+  gsap.from(heroVisual, {
+    duration: 1.8,
+    x: 32,
+    opacity: 0,
+    delay: 0.50,
+    ease: 'power2.out'
+  });
+};
+
+animateHero();
