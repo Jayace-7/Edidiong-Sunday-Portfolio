@@ -905,6 +905,7 @@ ul {
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding-block: 10px;
 }
 
 .work__track {
@@ -1119,6 +1120,30 @@ ul {
   text-align: center;
 }
 
+/* ---------- Dots ---------- */
+
+.testimonials__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.testimonials__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--border-subtle);
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.testimonials__dot--active {
+  width: 24px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+}
+
 .testimonials__quote-mark {
   display: block;
   font-family: var(--font-heading);
@@ -1207,30 +1232,6 @@ ul {
 
 .testimonials__arrow:active {
   transform: scale(0.96);
-}
-
-/* ---------- Dots ---------- */
-
-.testimonials__dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 28px;
-}
-
-.testimonials__dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--border-subtle);
-  transition: width 0.25s ease, background 0.25s ease;
-}
-
-.testimonials__dot--active {
-  width: 24px;
-  border-radius: var(--radius-full);
-  background: var(--color-accent);
 }
 
 /* ---------- Responsive ---------- */
