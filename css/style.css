@@ -901,7 +901,7 @@ ul {
 .work__marquee {
   position: relative;
   width: 100%;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .work__track {
