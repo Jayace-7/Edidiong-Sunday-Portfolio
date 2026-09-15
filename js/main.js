@@ -194,11 +194,11 @@ const initTestimonialsCarousel = () => {
     });
   });
 
-  // Pause autoplay while the user's cursor is over the carousel.
-  const carousel = track.closest('.testimonials__carousel');
-  if (carousel) {
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
+  // Pause autoplay while the user's cursor is over the testimonials section.
+  const testimonialsSection = track.closest('.testimonials');
+  if (testimonialsSection) {
+    testimonialsSection.addEventListener('mouseenter', stopAutoplay);
+    testimonialsSection.addEventListener('mouseleave', startAutoplay);
   }
 
   goToSlide(0);
