@@ -1112,7 +1112,7 @@ ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   padding: 36px 32px;
   background: var(--color-primary-light);
   border: 1px solid var(--border-subtle);
@@ -1246,7 +1246,7 @@ ul {
   }
 
   .testimonials__card {
-    height: 340px;
+    min-height: 340px;
     padding: 28px 20px;
   }
 
